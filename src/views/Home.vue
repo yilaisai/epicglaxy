@@ -102,7 +102,6 @@ export default {
   name: 'home',
   data() {
     return {
-      height:'1180px',
 
     }
   },
@@ -367,7 +366,7 @@ export default {
       }
     }
     .teamwork {
-      
+
     }
   }
   @media screen and (max-width: 750px) {
