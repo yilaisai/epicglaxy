@@ -18,7 +18,10 @@
         </div>
       </div>
     </div>
-    <div class="min-header"></div>
+    <div class="min-header">
+      <img src="../assets/img/logo.png" alt="" class="logo">
+      <div class="min-header-right"></div>
+    </div>
   </div>
 </template>
 <script>
@@ -40,7 +43,11 @@
 <style lang='less' scoped>
   .header {
     width:100%;
-    background: #000;
+    position: absolute;
+    top:0;
+    left:0;
+    background: transparent;
+    z-index:9;
     .big-header {
       width:1200px;
       padding-top:47px;
@@ -104,10 +111,11 @@
           color:#fdfdfe;
           font-size:12px;
           cursor: pointer;
+          transition: all .2s;
           &.active {
             background: #FFF;
             color:#000;
-            transform: scale(1.1);
+            // transform: scale(1.05);
             z-index:9;
             .lang-top {
               position: absolute;
@@ -148,7 +156,7 @@
           border-radius: 15px 10px 10px 15px;
         }
         .lang-en {
-          left:40px;
+          left:37px;
           border-radius: 10px 15px 15px 10px;
           .lang-top {
             position: absolute;
@@ -166,6 +174,38 @@
             top:15px;
             left:25px;
           }
+        }
+      }
+    }
+    .min-header {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 750px) { 
+    .header {
+      .big-header {
+        display: none;
+      }
+      .min-header {
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        padding:.4rem .4rem 0;
+        font-size:.24rem;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        .logo {
+          height:.4rem;
+        }
+        &-right {
+          width:.44rem;
+          height:.38rem;
+          background:url(../assets/img/xiala.png) no-repeat center/cover;
         }
       }
     }

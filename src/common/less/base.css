@@ -60,3 +60,21 @@ button {
 table {
   border-collapse: collapse;
 }
+@font-face {
+  font-family: SourceHanSansCN-Bold;
+  src: url('../font/NotoSansHans-Medium.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: PingFang-SC-Bold;
+  src: url('../font/PingFangBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PingFang-SC-Medium;
+  src: url('../font/PingFangMedium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
