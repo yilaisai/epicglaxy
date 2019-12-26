@@ -12,6 +12,15 @@ const strict = `"${process.env.NODE_ENV}"` === 'development';
 const store = new Vuex.Store({
   state: {
     isLoading: false, // loading
+    ScrollConfig: {
+      duration: 600,
+      delay: 200,
+      enter: 'bottom',
+      // reset: true,
+      mobile: true,
+      distance: '20px',
+      opacity: 0.001
+    }
   },
   actions,
   mutations,

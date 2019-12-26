@@ -1,26 +1,25 @@
 import Vue from 'vue';
 
-export const convertNull = value => (value || 0);
-Vue.filter('convertNull', convertNull);
-
-export const convertNum = (value) => {
-  if (value) {
-    return value / 100;
-  }
-  return 0;
-};
-Vue.filter('convertNum', convertNum);
-
-
-// 验证手机号
-export const isPhoneNumber = (str) => {
-  const reg = /^1[34578]\d{9}$/;
-  return reg.test(str);
-};
-
+//获取浏览器语言
+export const getLanguage = () => {
+	let language = null
+	let lang = ""
+	if (navigator.appName == 'Netscape'){
+		language = navigator.language;
+	} else{
+		language = navigator.browserLanguage;
+	}
+	if (language.indexOf('en') > -1){
+		lang = "en-US"
+	} else if (language.indexOf('zh') > -1){
+		lang = "zh-CN"
+	} else{
+		lang = "en-US"
+	}
+	return lang
+}
 
 // 日期
-
 export const dateFormat = function dateFormat(date, fmt = 'YYYY-MM-DD') {
   let newDate = date;
   let fmts = fmt;
@@ -71,26 +70,4 @@ export const dateFormat = function dateFormat(date, fmt = 'YYYY-MM-DD') {
     });
   return fmts;
 };
-
 Vue.filter('dateFormat', dateFormat);
-
-class CustomError extends Error {
-  constructor(message) {
-    super(message);
-    this.name = this.constructor.name;
-  }
-}
-
-// 你可以这样使用: typeValidate({})('String') === false
-export function typeValidate(obj) {
-  const types = [
-    'Arguments', 'Function', 'String', 'Number', 'Date', 'RegExp', 'Error', 'Symbol', 'Map',
-    'WeakMap', 'Set', 'WeakSet', 'Object', 'Null', 'Undefined', 'Boolean', 'Array',
-  ];
-  return (type) => {
-    if (types.indexOf(type) > -1) {
-      return Object.prototype.toString.call(obj) === `[object ${type}]`;
-    }
-    throw new CustomError('Invalid test type');
-  };
-}

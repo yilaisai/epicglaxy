@@ -1,18 +1,13 @@
-export const appRouter = [{
-  path: '/',
-  name: 'home',
-  component: () => import('../views/Home.vue'),
-  meta:{
-    keepAlive:true
-  }
-},{
-  path: '/about',
-  name: 'about',
-  component: () => import('../views/About.vue'),
-  meta:{
-    keepAlive:true
-  }
-}];
+export const appRouter = [
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('../views/Home.vue'),
+    meta:{
+      keepAlive:true
+    }
+  },
+];
 
 export default [
   ...appRouter,
