@@ -38,19 +38,19 @@
     <!-- 公司介绍 -->
     <div class="introduce">
       <div class="innerBox">
-        <h5 class="title">公司介绍</h5>
+        <h5 class="title scroll">公司介绍</h5>
         <div class="content">
           <div class="content-top">
-            <div class="content-top-left">
+            <div class="content-top-left scroll">
               <h5>进出口跨境品牌全渠道管理和全球直采网络</h5>
               <p>总部设在深圳，在悉尼、香港、上海和洛杉矶有分公司的大型跨境贸易综合服务商。<br/><br/>通过跨境贸易互联网技术和整合跨境供应链上下游资源，为国内外各供应商和渠道商提供提供商品数字化管理、跨境供销系统搭建、大宗商品交易、跨境物流通关、供应链金融、品牌孵化和代运营、渠道与平台对接及销售等品牌全渠道管理服务。</p>
             </div>
-            <div class="content-top-right">
+            <div class="content-top-right scroll">
               <img src="../assets/img/introduce_img1.png" alt="">
               <p>璨宇贸易进出口核心目标国家和地区</p>
             </div>
           </div>
-          <div class="content-btm">
+          <div class="content-btm scroll">
             <div class="content-btm-left">
               <img src="../assets/img/introduce_img2.png" alt="">
             </div>
@@ -65,7 +65,7 @@
 
     <!-- 专业团队 -->
     <div class="team">
-      <div class="innerBox">
+      <div class="innerBox scroll">
         <h5 class="title">专业团队</h5>
         <p class="text">由前大型跨境电商平台CEO领衔国际化团队，核心成员拥有15年以上跨境行业和电商平台运营经验，深谙进出口贸易及跨境品牌市场行情，精耕线上线下消费市场，拥有深厚的行业深厚资源和品牌运营托管能力。</p>
       </div>
@@ -74,25 +74,41 @@
     <!-- 公司优势 -->
     <div class="advantage">
       <div class="innerBox">
-        <h5 class="title">公司优势</h5>
+        <h5 class="title scroll">公司优势</h5>
         <div class="top">
-          <div class="top-left">
+          <div class="top-left scroll">
             <h5>品牌强绑定优势</h5>
             <p>贸易网络涵盖澳新、欧美、日韩等区域，可从全球各地调度商品进入中国，让中国优质商品出口海外，打造从源头商家到消费者的全球性供销网络，实现品牌、渠道、平台三方的强绑定关系</p>
             <br/>
             <p>运动潮牌、天然奶粉、保健品、热门母婴、奢侈品、时尚装饰、品质日化，从质量、商家信誉、市场接受度等多维度评估，为客户精选优质海外商品，为品牌方对接好国内第三方平台和商家，解决双方的后顾之忧。</p>
           </div>
-          <div class="top-right">
+          <div class="top-right scroll">
             <img src="../assets/img/advantage_bg.jpg" alt="">
           </div>
         </div>
-        <div class="btm"></div>
+        <div class="btm">
+          <h5 class="btm-title scroll">汇集热销品类</h5>
+          <p class="btm-text scroll">依托强大的供销网络，璨宇贸易汇集了各类国际热销和特色商品。</p>
+          <ul class="scroll">
+            <li>澳洲奶粉</li>
+            <li>营养保健品</li>
+            <li>运动潮牌</li>
+            <li>进口商超百货</li>
+            <li>美妆护肤</li>
+            <li>欧美大牌</li>
+            <li>奢侈品</li>
+            <li>其它特色商品</li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <!-- 合作模式 -->
     <div class="teamwork">
-
+      <div class="innerBox">
+        <h5 class="title scroll">多种合作模式</h5>
+        <img src="../assets/img/teamwork_bg.png" alt="" class="scroll">
+      </div>
     </div>
   </div>
 </template>
@@ -328,7 +344,7 @@ export default {
       width:100%;
       background: #FFF;
       .innerBox {
-        width: 1200px;
+        width: 1290px;
         padding:110px 0 77px;
         margin:0 auto;
         .title {
@@ -337,6 +353,9 @@ export default {
           font-size:37.5px;
         }
         .top {
+          width:1200px;
+          margin:0 auto;
+          margin-bottom:56px;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -363,10 +382,90 @@ export default {
             }
           }
         }
+        .btm {
+          font-family: PingFang-SC-Medium;
+          &-title {
+            margin-bottom:27px;
+            font-size:25px;
+            color:#111D32;
+            font-weight: 600;
+          }
+          &-text {
+            margin-bottom:34px;
+            font-size:17px;
+            color:#818282;
+          }
+          ul {
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+              width:319px;
+              height:223px;
+              line-height: 200px;
+              margin-right:4px;
+              margin-bottom:14px;
+              font-size:32px;
+              color:#FFF;
+              font-family: PingFang-SC-Bold;
+              transition: all .5s;
+              transform: scale(1);
+              &:nth-of-type(1) {
+                background: url('../assets/img/advantage_icon1.png') center/cover no-repeat;
+              }
+              &:nth-of-type(2) {
+                background: url('../assets/img/advantage_icon2.png') center/cover no-repeat;
+              }
+              &:nth-of-type(3) {
+                background: url('../assets/img/advantage_icon3.png') center/cover no-repeat;
+              }
+              &:nth-of-type(4) {
+                background: url('../assets/img/advantage_icon4.png') center/cover no-repeat;
+                margin-right:0;
+              }
+              &:nth-of-type(5) {
+                background: url('../assets/img/advantage_icon5.png') center/cover no-repeat;
+              }
+              &:nth-of-type(6) {
+                background: url('../assets/img/advantage_icon6.png') center/cover no-repeat;
+              }
+              &:nth-of-type(7) {
+                background: url('../assets/img/advantage_icon7.png') center/cover no-repeat;
+              }
+              &:nth-of-type(8) {
+                background: url('../assets/img/advantage_icon8.png') center/cover no-repeat;
+                margin-right:0;
+              }
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
       }
     }
     .teamwork {
-
+      width:100%;
+      height:1130px;
+      background: linear-gradient(to bottom, #fff, #D8E5F9);
+      .innerBox {
+        width:1290px;
+        height:100%;
+        padding-top:132px;
+        margin:0 auto;
+        box-sizing: border-box;
+        .title {
+          margin-bottom:126px;
+          font-size:37.5px;
+          font-weight: bold;
+          color:#272727;
+          font-family: SourceHanSansCN-Bold;
+        }
+        img {
+          width:100%;
+          height:425px;
+        }
+      }
     }
   }
   @media screen and (max-width: 750px) {
