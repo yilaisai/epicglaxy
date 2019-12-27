@@ -1,8 +1,33 @@
 export const appRouter = [
   {
     path: '/',
+    name: 'index',
+    redirect: '/home',
+    component: () => import('../views/Home.vue'),
+    meta:{
+      keepAlive:true
+    }
+  },
+  {
+    path: '/home',
     name: 'home',
     component: () => import('../views/Home.vue'),
+    meta:{
+      keepAlive:true
+    }
+  },
+  {
+    path: '/manage',
+    name: 'manage',
+    component: () => import('../views/manage.vue'),
+    meta:{
+      keepAlive:true
+    }
+  },
+  {
+    path: '/serve',
+    name: 'serve',
+    component: () => import('../views/serve.vue'),
     meta:{
       keepAlive:true
     }
@@ -18,14 +43,6 @@ export default [
     meta: {
       title: '404 - 找不到页面',
     },
-    component: {
-      render(h) {
-        return h('h1', {
-          attrs: {
-            style: 'text-align: center;',
-          },
-        }, '页面不存在');
-      },
-    },
+    component: () => import('../views/404.vue'),
   },
 ];

@@ -63,7 +63,7 @@ table {
 @font-face {
   font-family: SourceHanSansCN-Bold;
   src: url('../font/NotoSansHans-Medium.ttf');
-  font-weight: 600;
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
@@ -75,6 +75,12 @@ table {
 @font-face {
   font-family: PingFang-SC-Medium;
   src: url('../font/PingFangMedium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: PingFang-SC-Regular;
+  src: url('../font/PingFangSCRegular.ttf');
   font-weight: normal;
   font-style: normal;
 }

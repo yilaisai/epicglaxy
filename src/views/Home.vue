@@ -110,33 +110,40 @@
         <img src="../assets/img/teamwork_bg.png" alt="" class="scroll">
       </div>
     </div>
+
+    <!-- 底部 -->
+    <Footer ref="footer"></Footer>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'home',
-  data() {
-    return {
+  import Footer from '@/components/footer'
+  export default {
+    name: 'home',
+    data() {
+      return {
 
-    }
-  },
-  mounted(){
-    this.$ScrollReveal().reveal('.scroll',this.$store.state.ScrollConfig)
-    this.intSwiper()
-  },
-  methods:{
-    intSwiper() {
-      //初始化banner轮播图
-      var mySwiper = new Swiper ('.swiper-container', {
-        loop: true, // 循环模式选项
-        autoplay: 3000,
-        // 如果需要分页器
-        pagination:'.swiper-pagination'
-      })
+      }
+    },
+    mounted(){
+      this.$ScrollReveal().reveal('.scroll',this.$store.state.ScrollConfig)
+      this.intSwiper()
+    },
+    methods:{
+      intSwiper() {
+        //初始化banner轮播图
+        var mySwiper = new Swiper ('.swiper-container', {
+          loop: true, // 循环模式选项
+          autoplay: 3000,
+          // 如果需要分页器
+          pagination:'.swiper-pagination'
+        })
+      }
+    },
+    components:{
+      Footer
     }
   }
-}
 </script>
 <style lang="less" scoped>
   .home {

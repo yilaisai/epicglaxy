@@ -18,7 +18,7 @@ const store = new Vuex.Store({
       enter: 'bottom',
       // reset: true,
       mobile: true,
-      distance: '20px',
+      distance: '40px',
       opacity: 0.001
     }
   },

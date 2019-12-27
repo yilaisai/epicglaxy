@@ -2,9 +2,11 @@
   <div class='header'>
     <div class="big-header">
       <img src="../assets/img/logo.png" alt="" class="logo">
-      <el-tabs v-model="activeIndex" @tab-click="handleClick" class="tagList">
-        <el-tab-pane :label="item"  v-for="(item,index) in list" :key="index" :name="index.toString()"></el-tab-pane>
-      </el-tabs>
+      <el-menu :default-active="onRoutes" class="el-menu-demo tagList" mode="horizontal" text-color="#FFF" active-text-color="#FFF" router>
+        <template v-for="item in items">
+          <el-menu-item :index="item.index" :key="item.index">{{ item.title }}</el-menu-item>
+        </template>
+      </el-menu>
       <div class="langBox">
         <div @click="activeLang = 'zh'" :class="[{'active':activeLang == 'zh'},'lang-zh lang']">
           <span class="lang-top">中</span>
@@ -28,16 +30,36 @@
   export default {
     data() {
       return { 
-        list:['首页','跨境品牌全渠道管理','服务模式','关于我们'],
-        activeIndex:'0',
-        activeLang:'zh'
+        activeLang:'zh',
+        items: [
+          {
+            index:'home',
+            title:'首页'
+          },
+          {
+            index:'manage',
+            title:'跨境品牌全渠道管理'
+          },
+          {
+            index:'serve',
+            title:'服务模式'
+          },
+          {
+            index:'33',
+            title:'关于我们'
+          },
+        ],
       }
+    },
+    computed:{
+      onRoutes(){
+        return this.$route.path.replace('/','');
+      },
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab.index)
-      }
     },
+    watch:{
+    }
   }
 </script>
 <style lang='less' scoped>
@@ -63,37 +85,47 @@
         height:45px;
         display: flex;
         align-items: center;
-        /deep/ .el-tabs__header {
-          margin:0;
-          .el-tabs__nav-wrap::after {
-            background-color: transparent;
-          }
-          .el-tabs__item {
-            max-width:180px;
-            min-width:120px;
-            height:45px;
-            line-height: 45px;
-            color:#FFF;
-            box-sizing: border-box;
-            &.is-active {
-              color:#FFF;
-            }
-          }
-          .el-tabs__active-bar {
-            background: #FFF;
-          }
-        }
+        background: transparent;
+        border-bottom:none;
+        // /deep/ .el-tabs__header {
+        //   margin:0;
+        //   .el-tabs__nav-wrap::after {
+        //     background-color: transparent;
+        //   }
+        //   .el-tabs__item {
+        //     max-width:180px;
+        //     min-width:120px;
+        //     height:45px;
+        //     line-height: 45px;
+        //     color:#FFF;
+        //     box-sizing: border-box;
+        //     &.is-active {
+        //       color:#FFF;
+        //     }
+        //   }
+        //   .el-tabs__active-bar {
+        //     background: #FFF;
+        //   }
+        // }
         li {
-          width:150px;
+          width:170px;
           height:100%;
           line-height: 45px;
           color:#FFF;
           font-size:14px;
           box-sizing: border-box;
+          // background: transparent;
           cursor: pointer;
-          &.active {
-            border-bottom:1px solid #FFF;
+          &.is-active {
+            border-bottom:2px solid #FFF;
+            background: none;
           }
+          &:hover {
+            background: transparent;
+          }
+          // &:active {
+          //   background: transparent;
+          // }
         }
       }
       .langBox {
