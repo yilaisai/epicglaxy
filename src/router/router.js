@@ -32,6 +32,14 @@ export const appRouter = [
       keepAlive:true
     }
   },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/about.vue'),
+    meta:{
+      keepAlive:true
+    }
+  },
 ];
 
 export default [

@@ -45,7 +45,7 @@
             title:'服务模式'
           },
           {
-            index:'33',
+            index:'about',
             title:'关于我们'
           },
         ],
