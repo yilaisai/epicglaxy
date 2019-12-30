@@ -8,12 +8,12 @@
         </template>
       </el-menu>
       <div class="langBox">
-        <div @click="activeLang = 'zh'" :class="[{'active':activeLang == 'zh'},'lang-zh lang']">
+        <div @click="changeLang('zh-CN')" :class="[{'active':activeLang == 'zh-CN'},'lang-zh lang']">
           <span class="lang-top">中</span>
           <img src="../assets/svg/xiegang.svg" alt="" class="lang-mid">
           <span class="lang-btm">CH</span>
         </div>
-        <div @click="activeLang = 'en'" :class="[{'active':activeLang == 'en'},'lang-en lang']">
+        <div @click="changeLang('en-US')" :class="[{'active':activeLang == 'en-US'},'lang-en lang']">
           <span class="lang-top">英</span>
           <img src="../assets/svg/xiegang.svg" alt="" class="lang-mid">
           <span class="lang-btm">EN</span>
@@ -30,7 +30,6 @@
   export default {
     data() {
       return { 
-        activeLang:'zh',
         items: [
           {
             index:'home',
@@ -55,8 +54,14 @@
       onRoutes(){
         return this.$route.path.replace('/','');
       },
+      activeLang() {
+        return this.$i18n.locale
+      }
     },
     methods: {
+      changeLang(lang) {
+        this.$i18n.locale = lang
+      }
     },
     watch:{
     }

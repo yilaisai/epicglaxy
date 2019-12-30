@@ -145,7 +145,7 @@
     .box1 {
       width:100%;
       height:631px;
-      background: url('../assets/img/serve_bg.jpg') center/cover no-repeat;
+      background: url('../assets/img/serve_bg1.jpg') center/cover no-repeat;
       .innerBox {
         width:1200px;
         margin:0 auto;
@@ -250,7 +250,7 @@
     }
     .box4 {
       width:100%;
-      background:linear-gradient(0deg,rgba(184,208,244,.58) 0%,rgba(255,255,255,.58) 100%);
+      background:url('../assets/img/serve_bg2.jpg') bottom/cover no-repeat;
       .innerBox {
         width:1200px;
         padding:100px 0;

@@ -18,16 +18,16 @@
       <!-- 企业简介 -->
       <div class="box2">
           <div class="innerBox">
-              <h5 class="title">企业简介</h5>
-              <p class="tips">总部设在深圳，在悉尼、香港、上海和洛杉矶有分公司的大型跨境贸易综合服务商。<br/>
+              <h5 class="title scroll">企业简介</h5>
+              <p class="tips scroll">总部设在深圳，在悉尼、香港、上海和洛杉矶有分公司的大型跨境贸易综合服务商。<br/>
                通过跨境贸易互联网技术和整合跨境供应链上下游资源，为国内外各大品牌商和经销商提供大宗商品交易、跨境物流通关、品牌孵化和代运营、渠道与平台对接及销售等品牌全渠道管理。可在全球范围内调度商品进入中国，中国优质商品出口海外，打造从源头商家到消费者的全球性供销网络，实现品牌、渠道、平台三方的强绑定关系，实现共赢。</p>
-                <img src="../assets/img/about_img1.png" alt="">
+                <img src="../assets/img/about_img1.png" alt="" class="scroll">
           </div>
       </div>
 
       <!-- 公司历程 -->
       <div class="box3">
-          <div class="innerBox">
+          <div class="innerBox scroll">
               <img src="../assets/img/about_img2.png" alt="">
               <div class="left1 left">
                   <h5>2017年3月公司成立</h5>
@@ -67,8 +67,8 @@
       <!-- 招贤纳士 -->
       <div class="box5">
           <div class="innerBox">
-              <h5 class="title">招贤纳士</h5>
-              <div class="jobBox">
+              <h5 class="title scroll">招贤纳士</h5>
+              <div class="jobBox scroll">
                 <div class="top"></div>
                 <div class="bottom"></div>
                 <div class="bg-box"></div>
@@ -81,8 +81,10 @@
 
       <!-- 联系方式 -->
       <div class="box6">
-            <h5 class="title">联系方式</h5>
+          <div class="innerBox">
+            <h5 class="title scroll">联系方式</h5>
             <img src="../assets/img/about_bg3.png" alt="">
+          </div>
       </div>
 
       <!-- 底部 -->
@@ -180,7 +182,7 @@
                     h5 {
                         color:#010000;
                         font-size:23px;
-                        font-weight: PingFang-SC-Bold;
+                        font-family: PingFang-SC-Bold;
                         font-weight: bold;
                     }
                     p {
@@ -191,37 +193,32 @@
                 }
                 .left {
                     text-align: right;
+                    left:-10px;
                 }
                 .right {
                     text-align: left;
+                    right:-10px;
                 }
                 .left1 {
-                    top:40px;
-                    left:0;
+                    top:32px;
                 }
                 .left2 {
-                    top:220px;
-                    left:0;
+                    top:222px;
                 }
                 .left3 {
-                    top:420px;
-                    left:0;
+                    top:410px;
                 }
                 .left4 {
-                    top:600px;
-                    left:0;
+                    top:598px;
                 }
                 .right1 {
-                    top:140px;
-                    right:0;
+                    top:130px;
                 }
                 .right2 {
-                    top:320px;
-                    right:0;
+                    top:317px;
                 }
                 .right3 {
-                    top:440px;
-                    right:0;
+                    top:505px;
                 }
             }
         }
@@ -230,13 +227,13 @@
             top:-32px;
             width:100%;
             height:950px;
-            background: url('../assets/img/about_bg2.png') center/cover no-repeat;
+            background: url('../assets/img/about_bg2.jpg') center/cover no-repeat;
             z-index:2;
         }
         .box5 {
             width:100%;
-            padding-top:160px;
-            background: linear-gradient(0deg,rgba(184,208,244,.58) 0%,rgba(255,255,255,.58) 100%);
+            padding:160px 0 210px;
+            background: url('../assets/img/about_bg4.jpg') bottom/cover no-repeat;
             .innerBox {
                 width:1200px;
                 margin:0 auto;
@@ -312,6 +309,11 @@
             width:100%;
             padding-top:170px;
             box-sizing: border-box;
+            .innerBox {
+                min-width:1200px;
+                margin:0 auto;
+                overflow: hidden;
+            }
             .title {
                 margin-bottom:80px;
                 color:#272727;
@@ -321,7 +323,6 @@
             }
             img {
                 width:100%;
-                height:615px;
             }
         }
     }

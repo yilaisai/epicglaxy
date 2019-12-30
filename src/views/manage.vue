@@ -358,7 +358,7 @@
     }
     .box4 {
       width:100%;
-      background: linear-gradient(to bottom,#FFFFFF,#D8E5F9);
+      background: url(../assets/img/manage_bg2.jpg) bottom/cover no-repeat;
       .innerBox {
         width:1240px;
         padding-bottom:130px;
