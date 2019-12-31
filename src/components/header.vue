@@ -58,6 +58,9 @@
         return this.$i18n.locale
       }
     },
+    mounted() {
+
+    },
     methods: {
       changeLang(lang) {
         this.$i18n.locale = lang
@@ -225,7 +228,7 @@
       }
       .min-header {
         display: block;
-        position: absolute;
+        position: fixed;
         top:0;
         left:0;
         width:100%;
@@ -236,6 +239,7 @@
         align-items: center;
         justify-content: space-between;
         box-sizing: border-box;
+        z-index:9;
         .logo {
           height:.4rem;
         }

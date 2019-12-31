@@ -357,6 +357,7 @@
         .title {
           margin-bottom:44px;
           font-family: SourceHanSansCN-Bold;
+          font-weight: bold;
           font-size:37.5px;
         }
         .top {
@@ -374,7 +375,7 @@
               margin-bottom:30px;
               color:#111D32;
               font-size:25px;
-              
+              font-weight: bold;
             }
             p {
               line-height: 25px;
@@ -483,7 +484,149 @@
         .swiper-wrapper { 
           .swiper-slide { 
             height:10rem;
+            .innerBox {
+              width:100%;
+            }
           }
+        }
+      }
+      .introduce {
+        .innerBox {
+          width: 100%;
+          padding:.42rem 0  .67rem;
+          .title {
+            font-size:.54rem;
+          }
+          .content {
+            padding:0 .2rem;
+            box-sizing: border-box;
+            .content-top {
+              flex-direction: column;
+              margin-bottom:.6rem;
+              &-left {
+                width:100%;
+                box-sizing: border-box;
+                h5 {
+                  margin-bottom:.4rem;
+                  font-size:.35rem;
+                }
+                p {
+                  line-height: .4rem;
+                  font-size:.25rem;
+                }
+              }
+              &-right {
+                width:100%;
+                margin-top:.5rem;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                img {
+                  width:5.5rem;
+                  height:auto;
+                  margin-right:0;
+                }
+              }
+            }
+            .content-btm {
+              flex-direction: column;
+              &-left {
+                padding-left:0;
+                margin-bottom:.4rem;
+                img {
+                  width:100%;
+                  height:auto;
+                }
+              }
+              &-right {
+                width:100%;
+                h5 {
+                  margin-bottom:.3rem;
+                  font-size:.35rem;
+                  line-height: .45rem;
+                }
+                p {
+                  line-height: .4rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .team {
+        height:9.5rem;
+        .innerBox {
+          width: 100%;
+          padding:1.5rem .2rem 0;
+          box-sizing: border-box;
+          .title {
+            font-size:.54rem;
+            margin-bottom:.4rem;
+          }
+          .text {
+            width:100%;
+            font-size:.25rem;
+            line-height: .4rem;
+          }
+        }
+      }
+      .advantage {
+        .innerBox {
+          width: 100%;
+          padding-top:1.1rem;
+          .title {
+            margin-bottom:.4rem;
+            font-size:.54rem;
+          }
+          .top {
+            width:100%;
+            padding:0 .2rem;
+            margin-bottom:.56rem;
+            box-sizing: border-box;
+            flex-direction: column;
+            &-left {
+              width:100%;
+              h5 {
+                margin-bottom:.3rem;
+                font-size:.4rem;
+                text-align: center;
+              }
+              p {
+                font-size:.25rem;
+                line-height: .4rem;
+              }
+            }
+            &-right {
+              img {
+                width:100%;
+                height:auto;
+              }
+            }
+          }
+          .btm {
+            &-title {
+              margin-bottom:.27rem;
+              font-size:.4rem;
+            }
+            &-text {
+              margin-bottom:.34rem;
+              font-size:.25rem;
+              line-height: .4rem;
+            }
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              li {
+                width:30%;
+                height:auto;
+              }
+            }
+          }
+        }
+      }
+      .teamwork {
+        .innerBox {
+          width: 100%;
         }
       }
     }

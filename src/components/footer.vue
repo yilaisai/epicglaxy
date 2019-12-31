@@ -69,4 +69,13 @@
       font-size:16px;
     }
   }
+  @media screen and (max-width: 750px) {
+    .footer {
+      .top {
+        .innnerBox {
+          width:100%;
+        }
+      }
+    }
+  }
 </style>
